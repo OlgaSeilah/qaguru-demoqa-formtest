@@ -1,7 +1,6 @@
 package com.demoqa;
 
 
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.*;
@@ -22,13 +21,13 @@ public class CorrectFillRegistrationFormTest extends BaseTest {
         String birthDay = "10";
         String subject = "Arts";
         String hobby = "Music";
-        String picturePath = "imgForTest/pngImg.png";
+        String picturePath = "img_for_test/pngImg.png";
         String pictureName = "pngImg.png";
         String address = "Some street, 13";
         String state = "NCR";
         String city = "Delhi";
 
-        Selenide.open("/automation-practice-form");
+        open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
 
