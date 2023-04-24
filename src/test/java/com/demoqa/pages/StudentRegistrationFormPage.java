@@ -22,12 +22,11 @@ public class StudentRegistrationFormPage {
             hobbiesWrapper = $("#hobbiesWrapper"),
             uploadPictureInput = $("#uploadPicture"),
             currentAddressInput = $("#currentAddress"),
-            optionInStateDropdown = $("#react-select-3-option-0"),
             optionInCityDropdown = $("#react-select-4-option-0"),
             submitBtn = $("#submit");
 
-    private final ElementsCollection dropdowns = $$("#stateCity-wrapper .css-1wa3eu0-placeholder");
-
+    private final ElementsCollection dropdowns = $$("#stateCity-wrapper .css-1wa3eu0-placeholder"),
+    statesCitiesOptions = $$(".css-11unzgr div");
 
     public StudentRegistrationFormPage openPageWithClosingBottomAds() {
         open("/automation-practice-form");
@@ -115,16 +114,8 @@ public class StudentRegistrationFormPage {
         return this;
     }
 
-    public StudentRegistrationFormPage chooseOptionInStateDropdown() {
-        optionInStateDropdown.click();
-
-
-        return this;
-    }
-
-    public StudentRegistrationFormPage chooseOptionInCityDropdown() {
-        optionInCityDropdown.click();
-
+    public StudentRegistrationFormPage chooseOptionInStateCityDropdown(String value) {
+        statesCitiesOptions.findBy(text(value)).scrollIntoView(false).click();
 
         return this;
     }
@@ -134,7 +125,4 @@ public class StudentRegistrationFormPage {
 
         return this;
     }
-
-
-
 }
