@@ -1,6 +1,6 @@
-package com.demoqa.testData;
+package com.demoqa.test_data;
 
-import com.demoqa.testData.enums.*;
+import com.demoqa.test_data.enums.*;
 import com.github.javafaker.Faker;
 
 import java.util.Random;

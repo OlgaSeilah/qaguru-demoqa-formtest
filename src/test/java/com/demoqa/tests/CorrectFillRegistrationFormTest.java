@@ -3,11 +3,11 @@ package com.demoqa.tests;
 
 import com.demoqa.components.ResultModalWindow;
 import com.demoqa.pages.StudentRegistrationFormPage;
-import com.demoqa.testData.enums.City;
-import com.demoqa.testData.enums.States;
+import com.demoqa.test_data.enums.City;
+import com.demoqa.test_data.enums.States;
 import org.junit.jupiter.api.Test;
 
-import static com.demoqa.testData.TestData.*;
+import static com.demoqa.test_data.TestData.*;
 
 public class CorrectFillRegistrationFormTest extends BaseTest {
 

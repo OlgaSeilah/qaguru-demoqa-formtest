@@ -1,4 +1,4 @@
-package com.demoqa.testData.enums;
+package com.demoqa.test_data.enums;
 
 public enum Month {
     JANUARY("January"),
