@@ -2,8 +2,10 @@ package com.demoqa.tests;
 
 
 import com.demoqa.pages.TextBoxPage;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Tag("simple")
 public class CorrectFillTextBoxFormTest extends BaseTest {
 
     private TextBoxPage textBoxPage = new TextBoxPage();
