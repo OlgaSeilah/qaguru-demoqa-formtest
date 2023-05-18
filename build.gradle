@@ -7,32 +7,37 @@ repositories {
     mavenCentral()
 }
 
+def selenideVersion = "6.13.0",
+    allureVersion = "2.21.0",
+    jUnitVersion = "5.9.3",
+    slf4jVersion = "2.0.7"
+
 allure {
     report { //секция репорта
-        version.set("2.19.0") // https://github.com/allure-framework/allure2
+        version.set(allureVersion) // https://github.com/allure-framework/allure2
     }
     adapter { // отвечает за появление папочки build/allure-results
         aspectjWeaver.set(true) //обработка аннотации @Step
         frameworks {
             junit5 { //название фреймворка
-                adapterVersion.set("2.19.0") //https://github.com/allure-framework/allure-java
+                adapterVersion.set(allureVersion) //https://github.com/allure-framework/allure-java
             }
         }
     }
 
-    //для запуска тестов через Gradle -> Tasks -> verification --> test
-    useJUnit5 {
-        version = "2.11.2"
-    }
+//    //для запуска тестов через Gradle -> Tasks -> verification --> test
+//    useJUnit5 {
+//        version = "2.11.2"
+//    }
 }
 
 dependencies {
     testImplementation (
-            "com.codeborne:selenide:6.12.4",
-            "org.junit.jupiter:junit-jupiter:5.8.2",
+            "com.codeborne:selenide:$selenideVersion",
+            "org.junit.jupiter:junit-jupiter:$jUnitVersion",
             "com.github.javafaker:javafaker:1.0.2",
-            "io.qameta.allure:allure-selenide:2.11.2",
-            "org.slf4j:slf4j-simple:2.0.7"
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "org.slf4j:slf4j-simple:$slf4jVersion"
     )
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
 }
