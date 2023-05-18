@@ -5,30 +5,38 @@ import com.demoqa.components.ResultModalWindow;
 import com.demoqa.pages.StudentRegistrationFormPage;
 import com.demoqa.test_data.enums.City;
 import com.demoqa.test_data.enums.States;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
+import static com.demoqa.allure.TagConstants.REGISTRATION;
+import static com.demoqa.allure.TagConstants.REGRESS;
 import static com.demoqa.test_data.TestData.*;
 
+@Tags({@Tag(REGRESS), @Tag(REGISTRATION)})
 public class CorrectFillRegistrationFormTest extends BaseTest {
 
     private StudentRegistrationFormPage studentRegistrationFormPage = new StudentRegistrationFormPage();
     private ResultModalWindow resultModalWindow = new ResultModalWindow();
+    
+    @DisplayName("Заполнение формы регистрации корректными данными")
     @Test
     public void successfulFillForm() {
-
-        String firstName = getFirstName();
-        String lastName = getLastName();
-        String email = getEmail();
-        String gender = getGender();
-        String phoneNumber = getPhoneNumber(10);
-        String birthMonth = getRandomMonth();
-        String birthYear = getRandomYear();
-        String birthDay = getRandomDay();
-        String subject = getRandomSubject();
-        String hobby = getRandomHobby();
-        String picturePathPng = getPicturePathPng();
-        String pictureNamePng = getPictureName();
-        String address = getAddress();
+        
+        String firstName = getFirstName(),
+                lastName = getLastName(), 
+                email = getEmail(), 
+                gender = getGender(),
+                phoneNumber = getPhoneNumber(10),
+                birthMonth = getRandomMonth(),
+                birthYear = getRandomYear(),
+                birthDay = getRandomDay(),
+                subject = getRandomSubject(),
+                hobby = getRandomHobby(),
+                picturePathPng = getPicturePathPng(),
+                pictureNamePng = getPictureName(),
+                address = getAddress();
         States state = getRandomState();
         City city = getCityForState(state);
 
