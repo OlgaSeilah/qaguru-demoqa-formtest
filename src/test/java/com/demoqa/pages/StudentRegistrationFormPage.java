@@ -29,6 +29,7 @@ public class StudentRegistrationFormPage {
     private final ElementsCollection dropdowns = $$("#stateCity-wrapper .css-1wa3eu0-placeholder"),
     statesCitiesOptions = $$(".css-11unzgr div");
 
+    @Step("Open \"/automation-practice-form\" with closing adds")
     public StudentRegistrationFormPage openPageWithClosingBottomAds() {
         open("/automation-practice-form");
 
