@@ -1,0 +1,17 @@
+{
+  "base": {
+    "project": "qa guru tlg notifications",
+    "environment": "some env",
+    "comment": "some comment",
+    "reportLink": "",
+    "language": "en",
+    "messenger": "telegram",
+    "allureFolder": "build/allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "5960973990:AAEmoxN1Kn_bvTAPTz47PMmfPJ2Gq5NVlSo",
+    "chat": "-1001453502461",
+    "replyTo": ""
+  }
+}
